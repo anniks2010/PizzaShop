@@ -1,0 +1,6 @@
+C:\Users\opilane\Projects\pizzaShop\pizzaShop\bin\Debug\pizzaShop.exe.config
+C:\Users\opilane\Projects\pizzaShop\pizzaShop\bin\Debug\pizzaShop.exe
+C:\Users\opilane\Projects\pizzaShop\pizzaShop\bin\Debug\pizzaShop.pdb
+C:\Users\opilane\Projects\pizzaShop\pizzaShop\obj\Debug\pizzaShop.csprojAssemblyReference.cache
+C:\Users\opilane\Projects\pizzaShop\pizzaShop\obj\Debug\pizzaShop.exe
+C:\Users\opilane\Projects\pizzaShop\pizzaShop\obj\Debug\pizzaShop.pdb
