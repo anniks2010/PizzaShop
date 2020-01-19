@@ -10,11 +10,13 @@ namespace pizzaShop
     {
         pizza pizza;
         int quantity;
+        string ingredients;
 
         public Items(pizza _pizza, int _quantity)
         {
             pizza = _pizza;
             quantity = _quantity;
+           
         }
         public pizza Pizza
         {
@@ -24,7 +26,7 @@ namespace pizzaShop
 
         public void PrintItem()
         {
-            Console.WriteLine($"ID: {pizza.Id}\n Name: {pizza.Name} \n Category: {pizza.Category} \n Price: {pizza.Price} \n Quantity: {quantity} \n Total: {CalculateItemTotal()}");
+            Console.WriteLine($"ID: {pizza.Id}\n Name: {pizza.Name} \n Ingredients: {pizza.Ingredients}\n Dough:{pizza.Dough}\n Category: {pizza.Category} \n Price: {pizza.Price} \n Quantity: {quantity} \n Total: {CalculateItemTotal()}");
         }
 
         public double CalculateItemTotal()

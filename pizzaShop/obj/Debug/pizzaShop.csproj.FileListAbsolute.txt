@@ -4,3 +4,10 @@ C:\Users\opilane\Projects\pizzaShop\pizzaShop\bin\Debug\pizzaShop.pdb
 C:\Users\opilane\Projects\pizzaShop\pizzaShop\obj\Debug\pizzaShop.csprojAssemblyReference.cache
 C:\Users\opilane\Projects\pizzaShop\pizzaShop\obj\Debug\pizzaShop.exe
 C:\Users\opilane\Projects\pizzaShop\pizzaShop\obj\Debug\pizzaShop.pdb
+C:\Users\Kodu\Desktop\PizzaShop\pizzaShop\obj\Debug\pizzaShop.csprojAssemblyReference.cache
+C:\Users\Kodu\Desktop\PizzaShop\pizzaShop\obj\Debug\pizzaShop.csproj.CoreCompileInputs.cache
+C:\Users\Kodu\Desktop\PizzaShop\pizzaShop\obj\Debug\pizzaShop.exe
+C:\Users\Kodu\Desktop\PizzaShop\pizzaShop\obj\Debug\pizzaShop.pdb
+C:\Users\Kodu\Desktop\PizzaShop\pizzaShop\bin\Debug\pizzaShop.exe.config
+C:\Users\Kodu\Desktop\PizzaShop\pizzaShop\bin\Debug\pizzaShop.exe
+C:\Users\Kodu\Desktop\PizzaShop\pizzaShop\bin\Debug\pizzaShop.pdb

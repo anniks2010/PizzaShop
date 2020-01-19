@@ -16,6 +16,10 @@ namespace pizzaShop
             shoppingCart = new List<Items>();
             total = 0;
         }
+        public double Total
+        {
+            get { return total; }
+        }
 
         public void AddToShoppingCart(pizza pizza, int quantity)
         {

@@ -12,14 +12,16 @@ namespace pizzaShop
         {
             Menu itemsInMenu = new Menu();
             ShoppingCart itemsInShoppingCart = new ShoppingCart();
-            Ingredients ExtraIngredients = new Ingredients();
+            Ingredients extraIngredients = new Ingredients();
 
             itemsInMenu.PrintMenu();
 
             AddToShoppingCart(itemsInMenu, itemsInShoppingCart);
+           
 
             while (true)   
             {
+            
             
              Console.WriteLine("Would you like to add more pizzas to shopping cart? (yes/no)");
              string userInput = Console.ReadLine().ToLower();
@@ -36,8 +38,22 @@ namespace pizzaShop
 
                     if (userInput2 == "yes")
                     {
-                        ExtraIngredients.PrintIngredients();
-                        AddToShoppingCart(itemsInMenu, itemsInShoppingCart);
+                        extraIngredients.PrintIngredients();
+                        AddToShoppingCart2(extraIngredients, itemsInShoppingCart);
+
+                        Console.WriteLine("Would you like to confirm your order? (yes/no)");
+                        string userInput3 = Console.ReadLine();
+
+                        if (userInput3 == "yes")
+                        {
+                            Console.Clear();
+                            itemsInShoppingCart.PrintShoppingCart();
+                            itemsInShoppingCart.PrintTotal();
+                            Console.WriteLine($"Total amount of shoppingcart is {itemsInShoppingCart.Total} $");
+                            break;
+                        }
+
+
                     }
                     if (userInput2 == "no")
                     {
@@ -47,7 +63,10 @@ namespace pizzaShop
                         if (userInput3 == "yes")
                         {
                             Console.Clear();
-                            Console.WriteLine($"Total amount of shoppingcart is {shoppingCart.Total} $");
+                            itemsInShoppingCart.PrintShoppingCart();
+                            itemsInShoppingCart.PrintTotal();
+                            Console.WriteLine($"Total amount of shoppingcart is {itemsInShoppingCart.Total} $");
+                            break;
                         }
                     }
                 }
@@ -64,13 +83,40 @@ namespace pizzaShop
         }
         public static void AddToShoppingCart(Menu itemsInMenu, ShoppingCart itemsInShoppingCart)
         {
-            Console.WriteLine($"Enter the id of the pizza or extra ingredients on menu to add it to the shopping cart: ");
+            Console.WriteLine($"Enter the id of the pizza on menu to add it to the shopping cart: ");
+            int productId = int.Parse(Console.ReadLine());
+
+            if (productId == 11 || productId == 12)
+            {
+                Ingredients extraIngredients = new Ingredients();
+                extraIngredients.PrintIngredients();
+                Console.WriteLine($"Enter 4 ingredients from the aboved list:");
+                string userInput = Console.ReadLine();
+
+
+            }
+        
+            
+            Console.WriteLine("Enter the numbers of items to add to the shopping cart: ");
+            int quantity = int.Parse(Console.ReadLine());
+
+            pizza articleToAdd = itemsInMenu.GetFromMenu(productId);
+            itemsInShoppingCart.AddToShoppingCart(articleToAdd, quantity);
+            itemsInShoppingCart.PrintShoppingCart();
+            
+
+
+          
+        }
+        public static void AddToShoppingCart2(Ingredients extraIngredients, ShoppingCart itemsInShoppingCart)
+        {
+            Console.WriteLine($"Enter the id of the extra ingredients on menu to add it to the shopping cart: ");
             int productId = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Enter the numbers of items to add to the shopping cart: ");
             int quantity = int.Parse(Console.ReadLine());
 
-            pizza articleToAdd = itemsInMenu.GetFromMenu(productId);
+            pizza articleToAdd = extraIngredients.GetFromMenuIngredients(productId);
             itemsInShoppingCart.AddToShoppingCart(articleToAdd, quantity);
             itemsInShoppingCart.PrintShoppingCart();
         }

@@ -14,28 +14,31 @@ namespace pizzaShop
         {
             InMenu = new List<pizza>();
 
-            pizza chicken = new pizza(1, "chicken_pizza", Category.PIZZA_TYPE, 8.5);
-            InMenu.Add(chicken);
-            pizza meat = new pizza(2, "meat_pizza", Category.PIZZA_TYPE, 10.6);
+            pizza hawaij = new pizza(1, "Hawaij_pizza", "Cheese, tex-mex sauce, barbeque chicken, onion","thin dough", Category.PIZZA_TYPE, 8.5);
+            InMenu.Add(hawaij);
+            pizza hawaijWithThickDough = new pizza(2, "Hawaij_pizza", "Cheese, tex-mex sauce, barbeque chicken, onion","thick dough", Category.PIZZA_TYPE, 8.5);
+            InMenu.Add(hawaijWithThickDough);
+            pizza meat = new pizza(3, "meat_pizza", "Pizza sauce, cheese, shrimps, crab meat","thin dough", Category.PIZZA_TYPE, 10.6);
             InMenu.Add(meat);
-            pizza children = new pizza(3, "children_pizza", Category.PIZZA_TYPE, 5.5);
+            pizza meatWithThickDough = new pizza(4, "meat_pizza", "Pizza sauce, cheese, shrimps, crab meat", "thick dough", Category.PIZZA_TYPE, 10.6);
+            InMenu.Add(meatWithThickDough);
+            pizza children = new pizza(5, "children_pizza", "Pizza sauce, cheese, smoked chicken, sweet pepper","thin dough", Category.PIZZA_TYPE, 5.5);
             InMenu.Add(children);
-            pizza veggy = new pizza(4, "veggy_pizza", Category.PIZZA_TYPE, 6);
+            pizza childrenWithThickDough = new pizza(6, "children_pizza", "Pizza sauce, cheese, smoked chicken, sweet pepper", "thick dough", Category.PIZZA_TYPE, 5.5);
+            InMenu.Add(childrenWithThickDough);
+            pizza veggy = new pizza(7, "veggy_pizza", "Pizza sauce, cheese, broccoli, sweet pepper,", "thin dough", Category.PIZZA_TYPE, 6);
             InMenu.Add(veggy);
-            pizza fish = new pizza(5, "fish_pizza", Category.PIZZA_TYPE, 9.9);
+            pizza veggyWithTcikDough = new pizza(8, "veggy_pizza", "Pizza sauce, cheese, broccoli, sweet pepper,", "thick dough", Category.PIZZA_TYPE, 6);
+            InMenu.Add(veggyWithTcikDough);
+            pizza fish = new pizza(9, "fish_pizza","Pizza sauce, cheese, bacon, tuna fish","thin dough", Category.PIZZA_TYPE, 9.9);
             InMenu.Add(fish);
-            pizza custom = new pizza(6, "custome_pizza", Category.PIZZA_TYPE, 7.6);
+            pizza fishWithThickDough = new pizza(10, "fish_pizza", "Pizza sauce, cheese, bacon, tuna fish", "thick dough", Category.PIZZA_TYPE, 9.9);
+            InMenu.Add(fishWithThickDough);
+            pizza custom = new pizza(11, "custome_pizza", "","thin dough", Category.PIZZA_TYPE, 7.6);
             InMenu.Add(custom);
-            /*pizza olives = new pizza(7, "olives", Category.INGREDIENTS, 2);
-            InMenu.Add(olives);
-            pizza cheese = new pizza(8, "cheese", Category.INGREDIENTS, 1.5);
-            InMenu.Add(cheese);
-            pizza ananas = new pizza(9, "ananas", Category.INGREDIENTS, 0.9);
-            InMenu.Add(ananas);*/
-            pizza thin = new pizza(10, "thin_dough", Category.DOUGH, 0);
-            InMenu.Add(thin);
-            pizza thick = new pizza(11, "thick_dough", Category.DOUGH, 2);
-            InMenu.Add(thick);
+            pizza customWithThickDough = new pizza(12, "custome_pizza", "","thick dough", Category.PIZZA_TYPE, 7.6);
+            InMenu.Add(customWithThickDough);
+        
         }
         public void PrintMenu()
         {
@@ -43,6 +46,8 @@ namespace pizzaShop
             {
                 Console.WriteLine($"ID: {pizza.Id}");
                 Console.WriteLine($"Product: {pizza.Name}");
+                Console.WriteLine($"Ingredients: {pizza.Ingredients}");
+                Console.WriteLine($"Dough: {pizza.Dough}");
                 Console.WriteLine($"Category: {pizza.Category}");
                 Console.WriteLine($"Price: {pizza.Price}");
                 Console.WriteLine();
@@ -53,5 +58,6 @@ namespace pizzaShop
         {
             return InMenu[id - 1]; 
         }
+        
     }
 }

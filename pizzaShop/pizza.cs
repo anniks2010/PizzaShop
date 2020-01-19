@@ -18,13 +18,18 @@ namespace pizzaShop
         string name;
         Category category;
         double price;
+        string ingredients;
+        string dough;
 
-        public pizza(int _id, string _name, Category _category, double _price)
+        public pizza(int _id, string _name, string _ingredients, string _dough, Category _category, double _price)
         {
             id = _id;
             name = _name;
             category = _category;
             price = _price;
+            ingredients = _ingredients;
+            dough = _dough;
+            
         }
         public int Id
         {
@@ -41,6 +46,14 @@ namespace pizzaShop
         public double Price
         {
             get { return price; }
+        }
+        public string Ingredients
+        {
+            get { return ingredients; }
+        }
+        public string Dough
+        {
+            get { return dough; }
         }
     }
 }
